@@ -27,7 +27,7 @@ node {
         publishHTML([
             allowMissing: true, 
             alwaysLinkToLastBuild: false, 
-            keepAll: true, 
+            keepAll: false, 
             reportDir: "${env.WORKSPACE}", 
             reportFiles: "report-sm.html", 
             reportName: "HTML Report for ${BUILD_ID}", 
