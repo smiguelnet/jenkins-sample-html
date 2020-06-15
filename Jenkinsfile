@@ -30,8 +30,8 @@ node {
             keepAll: false, 
             reportDir: "${env.WORKSPACE}", 
             reportFiles: "report-sm.html", 
-            reportName: "HTML Report", 
-            reportTitles: "Super Title"])
+            reportName: "HTML Report for ${BUILD_ID}", 
+            reportTitles: "Super Title ${JENKINS_URL}"])
     }
 
     //}
