@@ -24,7 +24,14 @@ node {
     }
 
     stage('Report') {
-        
+        publishHTML([
+            allowMissing: false, 
+            alwaysLinkToLastBuild: false, 
+            keepAll: false, 
+            reportDir: "${env.WORKSPACE}", 
+            reportFiles: "report-sm.html", 
+            reportName: "HTML Report", 
+            reportTitles: "Super Title"])
     }
 
     //}
