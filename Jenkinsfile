@@ -25,13 +25,14 @@ node {
 
     stage('Report') {
         publishHTML([
-            allowMissing: false, 
+            allowMissing: true, 
             alwaysLinkToLastBuild: false, 
-            keepAll: false, 
+            keepAll: true, 
             reportDir: "${env.WORKSPACE}", 
             reportFiles: "report-sm.html", 
             reportName: "HTML Report for ${BUILD_ID}", 
-            reportTitles: "Super Title ${JENKINS_URL}"])
+            reportTitles: "Super Title ${JENKINS_URL}"
+        ])
     }
 
     //}
